@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pooma Payment</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { font-family: Arial; background: #eee; padding: 20px; }
+        form {
+            background: white; padding: 25px;
+            max-width: 400px; margin: auto;
+            border-radius: 10px;
+        }
+        input, select {
+            width: 100%; padding: 10px;
+            margin-top: 10px; border-radius: 5px;
+        }
+        button {
+            background: black; color: white;
+            padding: 12px; width: 100%;
+            margin-top: 15px; border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align:center;">Payment Details</h2>
+
+<form action="thankyou.html">
+    <input type="text" placeholder="Full Name" required>
+    <input type="text" placeholder="Address" required>
+    <input type="number" placeholder="Phone Number" required>
+    <input type="email" placeholder="Email" required>
+    <button type="submit">Make Payment</button>
+</form>
+
+</body>
+</html>
