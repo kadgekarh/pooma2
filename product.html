@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pooma Product</title>
+    <style>
+        body { font-family: Arial; background: #f2f2f2; margin: 0; }
+        header { background: black; color: white; padding: 15px; text-align: center; }
+        .container { padding: 30px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
+        img { width: 350px; border-radius: 10px; }
+        .details { max-width: 400px; }
+        .btn {
+            background: black; color:white;
+            padding:12px; text-decoration: none;
+            border-radius: 5px; margin-top:20px; display:inline-block;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>Product Details</header>
+
+<div class="container">
+    <img id="productImg" src="">
+    <div class="details">
+        <h2 id="productName"></h2>
+        <h3 id="productPrice"></h3>
+        <p>High quality Pooma product with premium comfort and style.</p>
+
+        <a id="buyNowBtn" class="btn" href="">Buy Now</a>
+    </div>
+</div>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const price = params.get("price");
+    const img = params.get("img");
+
+    document.getElementById("productName").textContent = name;
+    document.getElementById("productPrice").textContent = "₹" + price;
+    document.getElementById("productImg").src = img;
+
+    document.getElementById("buyNowBtn").href = "payment.html?product=" + name + "&price=" + price;
+</script>
+
+</body>
+</html>
